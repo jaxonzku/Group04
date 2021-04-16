@@ -25,13 +25,12 @@ class SplashScreenPage extends StatelessWidget {
     return SplashScreen(
       seconds: 5,
       navigateAfterSeconds: new HomeScreen(),
-      backgroundColor: Colors.yellow,
+      // backgroundColor: Colors.yellow,
       title: new Text(
-        'Flutter Javatpoint',
+        'inp@1@college_name',
         textScaleFactor: 2,
       ),
-      image: new Image.network(
-          'https://static.javatpoint.com/tutorial/flutter/images/flutter-creating-android-platform-specific-code3.png'),
+      image: new Image.asset('assets/college_logo.png'),
       loadingText: Text("Loading"),
       photoSize: 150.0,
       loaderColor: Colors.red,
