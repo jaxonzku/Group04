@@ -1,0 +1,15 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Splash Screen Example")),
+      body: Center(
+          child: Text("Welcome to Home Page",
+              style: TextStyle(color: Colors.black, fontSize: 30))),
+    );
+  }
+}

@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'login.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -24,7 +26,7 @@ class SplashScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: new HomeScreen(),
+      navigateAfterSeconds: new LoginPage(),
       // backgroundColor: Colors.yellow,
       title: new Text(
         'inp@1@college_name',
