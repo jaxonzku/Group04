@@ -1,4 +1,0 @@
-#Thu Apr 08 23:43:06 IST 2021
-base.0=C\:\\xampp\\htdocs\\college_app\\demoapp\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
