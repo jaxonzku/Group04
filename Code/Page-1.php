@@ -3,17 +3,17 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Web Software Developers, Key Features, Data Visualization, IT solutions, IT solutions, Web Analytics, We are directly involved in t​he process, Get in Touch!">
+    <meta name="keywords" content="Give Us The Necessary Details Of Your Institution, Please Fill The Form Without Mistakes">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Page 1</title>
+    <title>Page 2</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Page-1.css" media="screen">
+<link rel="stylesheet" href="Page-2.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
     
     
     
@@ -24,7 +24,7 @@
 		"name": "",
 		"url": "index.html"
 }</script>
-    <meta property="og:title" content="Page 1">
+    <meta property="og:title" content="Page 2">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
@@ -64,56 +64,93 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-align-left u-clearfix u-image u-section-1" id="carousel_3e8e" data-image-width="1980" data-image-height="1350">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-27 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h1 class="u-custom-font u-text u-text-body-alt-color u-text-1">Your application is being generated.</h1>
-                  <p class="u-text u-text-body-alt-color u-text-2">It may take upto 10 minutes for the procedure to complete.The app can be downloaded after this process.<div class="loader">Loading...</div>
-                    <link rel="stylesheet" href="loader.css" media="screen"></p>
-                </div>
-              </div>
-              <div class="u-align-left u-container-style u-image u-layout-cell u-right-cell u-size-33 u-image-1" data-image-width="1200" data-image-height="912">
-                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-custom-color-2 u-section-2" id="carousel_3f86">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <img src="images/ffffff.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1372" data-image-height="1235">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="u-list u-repeater u-list-1">
-          <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-2">
-              <h3 class="u-text u-text-1">01. goal<br>
-              </h3>
-              <p class="u-text u-text-2">To reduce the time and cost required for creating a full functional application&nbsp;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-custom-color-2 u-section-3" id="carousel_7a8d">
+    <section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" data-image-width="1980" data-image-height="1114" id="sec-2dc4">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-1">Get in Touch!<br>
-        </h1>
-        <p class="u-text u-text-2">We align leaders around a shared purpose and strategic story that catalyzes their business and brand to take action.<br>group04@gmail.com
-        </p>
+        <h1 class="u-text u-title u-text-1">Give Us The Necessary Details Of Your Institution</h1>
+        <blockquote class="u-text u-text-2">These details will be used to generate your application.It may take upto 10 minutes for the app generation.Kindly be patient while it completes.</blockquote>
+        <div class="u-align-center u-black u-container-style u-expanded-width-xs u-group u-opacity u-opacity-35 u-group-1">
+          <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
+            <h1 class="u-text u-text-3">Please Fill The Form Without Mistakes</h1>
+            <div class="u-align-left u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
+              <form action="process.php" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" redirect="true">
+                <div class="u-form-group u-form-name u-form-group-1">
+                  <label for="name-5a14" class="u-label" wfd-invisible="true">Enter The Name Of Your Institution</label>
+                  <input type="text" id="name-5a14" name="name" class="u-input u-input-rectangle u-white" required="">
+                </div>
+                <div class="u-form-group u-form-group-2">
+                  <label for="text-ab3d" class="u-label">Enter The Name Of Your App</label>
+                  <input type="text" placeholder="" id="text-ab3d" name="text" class="u-input u-input-rectangle u-white">
+                </div>
+                <div class="u-form-group u-form-select u-form-group-3">
+                  <label for="select-964c" class="u-label">Select a Theme For Your App</label>
+                  <div class="u-form-select-wrapper">
+                    <select id="select-964c" name="select" class="u-input u-input-rectangle u-white">
+                      <option value="Black">Black</option>
+                      <option value="White">White</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Red">Red</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+                  </div>
+                  <div>
+                    <script>async function SavePhoto(inp) 
+{
+  
+    let formData = new FormData();
+    let photo = inp.files[0];      
+         
+    formData.append("photo", photo);
+    formData.append("user", JSON.stringify(user)); 
+    
+    const ctrl = new AbortController()    // timeout
+    setTimeout(() => ctrl.abort(), 5000);
+    
+    try {
+       let r = await fetch('/upload/image', 
+         {method: "POST", body: formData, signal: ctrl.signal}); 
+       console.log('HTTP response code:',r.status); 
+    } catch(e) {
+       console.log('Huston we have problem...:', e);
+    }
+    
+}
+</script>
+                    <br>
+                    Select college logo to upload:
+                    <input id="image-file" type="file" onchange="SavePhoto(this)" >
+
+                   
+              </div>
+              <div class="u-align-center u-form-group u-form-submit u-form-group-4">
+                  <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-20 u-btn-1">Continue<br>
+                  </a>
+                  <input type="submit" action="process.php" value="submit" class="u-form-control-hidden" name="button1" wfd-invisible="true">
+                </div>
+                </div>
+
+                
+                <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has been sent. </div>
+                <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> Unable to send your message. Please fix errors then try again. </div>
+                <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-image u-shading u-section-2" src="" data-image-width="1980" data-image-height="1237" id="sec-cdd8">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+    </section>
+    <section class="u-align-left u-clearfix u-image u-shading u-section-3" src="" data-image-width="1080" data-image-height="1080" id="sec-a14b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-title u-text-1">Sample Headline</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-image u-shading u-section-4" src="" data-image-width="1080" data-image-height="1080" id="sec-1257">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-title u-text-1">Sample Headline</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div>
     </section>
     
@@ -122,34 +159,16 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
-        <span>HTML Template</span>
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
       </a>
       <p class="u-text">
         <span>created with</span>
       </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Builder Software</span>
+      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
+        <span>Visual HTML Editor</span>
       </a>. 
     </section>
   </body>
 </html>
-<?php
-   extract($_REQUEST);
-   $command = escapeshellcmd('python C:\xampp\htdocs\college_app\demoapp\main.py');
-   $output = shell_exec($command);
-   echo $output;
-?>
-<?php
 
-    extract($_REQUEST);
-    $file=fopen("details.txt","w");
-    fwrite($file, $name ."\n");
-    fwrite($file, $text ."\n");
-    fwrite($file, $select ."\n");
-    fclose($file);
-   extract($_REQUEST);
-   $command = escapeshellcmd('python C:\xampp\htdocs\college_app\demoapp\main.py');
-   $output = shell_exec($command);
-   echo $output;
-?>

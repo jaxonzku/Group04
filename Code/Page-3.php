@@ -3,17 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Lets build your app">
+    <meta name="keywords" content="Web Software Developers, Key Features, Data Visualization, IT solutions, IT solutions, Web Analytics, We are directly involved in t​he process, Get in Touch!">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Home</title>
+    <title>Page 3</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
+<link rel="stylesheet" href="Page-3.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
     
     
     
@@ -23,7 +24,7 @@
 		"name": "",
 		"url": "index.html"
 }</script>
-    <meta property="og:title" content="Home">
+    <meta property="og:title" content="Page 1">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
@@ -63,15 +64,57 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="carousel_cc01" data-image-width="1980" data-image-height="1114">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <h1 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-custom-font u-font-lato u-text u-text-body-alt-color u-text-1">college app builder</h1>
-        <h3 class="u-text u-text-body-alt-color u-text-2">Build a social media application for your institution within 5 mins.</h3>
-        <a href="Page-2.html" data-page-id="68862864" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Lets' start</a>
+    <section class="u-align-left u-clearfix u-image u-section-1" id="carousel_3e8e" data-image-width="1980" data-image-height="1350">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-27 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h1 class="u-custom-font u-text u-text-body-alt-color u-text-1">Your application is being generated.</h1>
+                  <p class="u-text u-text-body-alt-color u-text-2">It may take upto 10 minutes for the procedure to complete.The app can be downloaded after this process.<div class="loader">Loading...</div>
+                    <link rel="stylesheet" href="loader.css" media="screen"></p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-image u-layout-cell u-right-cell u-size-33 u-image-1" data-image-width="1200" data-image-height="912">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="u-clearfix u-section-2" id="sec-9fba">
-      <div class="u-black u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
+    <section class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-custom-color-2 u-section-2" id="carousel_3f86">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <img src="images/ffffff.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1372" data-image-height="1235">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-list u-repeater u-list-1">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <h3 class="u-text u-text-1">01. goal<br>
+              </h3>
+              <p class="u-text u-text-2">To reduce the time and cost required for creating a full functional application&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-custom-color-2 u-section-3" id="carousel_7a8d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Get in Touch!<br>
+        </h1>
+        <p class="u-text u-text-2">We align leaders around a shared purpose and strategic story that catalyzes their business and brand to take action.<br>group04@gmail.com
+        </p>
+      </div>
     </section>
     
     
@@ -79,8 +122,8 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Template</span>
       </a>
       <p class="u-text">
         <span>created with</span>
@@ -91,3 +134,9 @@
     </section>
   </body>
 </html>
+<?php
+   extract($_REQUEST);
+   $command = escapeshellcmd('python C:\xampp\htdocs\college_app\demoapp\main.py');
+   $output = shell_exec($command);
+   echo $output;
+?>

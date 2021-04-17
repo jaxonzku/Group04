@@ -67,7 +67,7 @@
       <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-sm u-valign-middle-xs u-sheet-1">
         <h1 class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-custom-font u-font-lato u-text u-text-body-alt-color u-text-1">college app builder</h1>
         <h3 class="u-text u-text-body-alt-color u-text-2">Build a social media application for your institution within 5 mins.</h3>
-        <a href="Page-2.html" data-page-id="68862864" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Lets' start</a>
+        <a href="Page-1.php" data-page-id="68862864" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Lets' start</a>
       </div>
     </section>
     <section class="u-clearfix u-section-2" id="sec-9fba">
