@@ -1,53 +1,21 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
+import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
+import 'package:flutter_auth/constants.dart';
 
-import 'login.dart';
-
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: SplashScreenPage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class SplashScreenPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 5,
-      navigateAfterSeconds: new LoginPage(),
-      // backgroundColor: Colors.yellow,
-      title: new Text(
-        'inp@1@college_name',
-        textScaleFactor: 2,
+      title: 'Flutter Auth',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      image: new Image.asset('assets/college_logo.png'),
-      loadingText: Text("Loading"),
-      photoSize: 150.0,
-      loaderColor: Colors.red,
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Splash Screen Example")),
-      body: Center(
-          child: Text("Welcome to Home Page",
-              style: TextStyle(color: Colors.black, fontSize: 30))),
+      home: WelcomeScreen(),
     );
   }
 }
