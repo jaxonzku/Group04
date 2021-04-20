@@ -6,8 +6,8 @@ import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'AdminPage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_auth/AdminPage.dart';
 import 'MemberPage.dart';
 
 import 'dart:async';
@@ -98,6 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 25,
             gravity: ToastGravity.TOP,
             textColor: Colors.pink);
+        setlogged();
+
         Navigator.pushReplacementNamed(context, '/AdminPage');
       } else if (datauser[0]['status'] == '0') {
         Fluttertoast.showToast(
@@ -162,4 +164,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+setlogged() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setBool('logged', true);
+  Fluttertoast.showToast(
+      msg: "setfalse",
+      backgroundColor: Colors.grey,
+      fontSize: 25,
+      gravity: ToastGravity.TOP,
+      textColor: Colors.pink);
 }
