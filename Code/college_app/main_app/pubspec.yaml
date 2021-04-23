@@ -21,7 +21,16 @@ dependencies:
     sdk: flutter
   http: ^0.13.1
   http_client: ^1.5.1
+  firebase_database: ^3.1.6
   fluttertoast: ^8.0.4
+  firebase_storage: ^3.0.8
+  firebase_core: ^0.4.0+9
+  firebase_analytics: ^5.0.6
+  image_picker:
+  camera:
+  flutter_icons: ^1.1.0
+  path_provider:
+  path:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -4,6 +4,7 @@ import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_auth/constants.dart';
+import 'package:flutter_auth/screens2/feed_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -38,9 +39,7 @@ class Body extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: new MyHomePage(),
       routes: <String, WidgetBuilder>{
-        '/AdminPage': (BuildContext context) => new AdminPage(
-              username: username,
-            ),
+        '/AdminPage': (BuildContext context) => new FeedScreen(),
         '/MemberPage': (BuildContext context) => new MemberPage(
               username: username,
             ),
