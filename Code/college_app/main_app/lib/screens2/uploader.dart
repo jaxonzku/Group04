@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'aboutedit.dart';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -117,15 +118,15 @@ class CameraWidgetState extends State {
   */
 
   picker(imageFile) async {
-    String fileName = "newone"; //basename(_imageFile.path);
-    StorageReference firebaseStorageRef =
-        FirebaseStorage.instance.ref().child('uploads/$fileName');
-    StorageUploadTask uploadTask =
-        firebaseStorageRef.putFile(File(imageFile.path));
-    StorageTaskSnapshot taskSnapshot = await uploadTask.onComplete;
-    taskSnapshot.ref.getDownloadURL().then(
-          (value) => print("Done: $value"),
-        );
+    //  String fileName = "newone"; //basename(_imageFile.path);
+    //  StorageReference firebaseStorageRef =
+    //     FirebaseStorage.instance.ref().child('uploads/$fileName');
+    //  StorageUploadTask uploadTask =
+    //     firebaseStorageRef.putFile(File(imageFile.path));
+    // StorageTaskSnapshot taskSnapshot = await uploadTask.onComplete;
+    // taskSnapshot.ref.getDownloadURL().then(
+    //      (value) => print("Done: $value"),
+    //   );
   }
 
   void _openGallery(BuildContext context) async {

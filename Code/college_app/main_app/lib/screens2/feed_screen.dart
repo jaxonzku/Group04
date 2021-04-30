@@ -327,7 +327,7 @@ class _FeedScreenState extends State<FeedScreen> {
   void _navigateToprofile(BuildContext context) {
     print('Upload photo');
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => AccountPage()));
+        .push(MaterialPageRoute(builder: (context) => profile()));
   }
 
   void _navigateToNextScreen(BuildContext context) {

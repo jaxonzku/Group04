@@ -1,314 +1,166 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_auth/theme/colors.dart';
-import 'package:flutter_auth/screens2/account_images_json.dart';
-import 'package:flutter_auth/constants.dart';
 import 'package:firebase_database/firebase_database.dart';
-final DatabaseReference = FirebaseDatabase.instance.reference(); 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'aboutedit.dart';
 
-
-class AccountPage extends StatefulWidget {
-  @override
-  _AccountPageState createState() => _AccountPageState();
-}
-
-class _AccountPageState extends State<AccountPage> {
-  int selectedIndex = 0;
-
+class profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    return Scaffold(
-      appBar: getAppBar(),
-      body: getBody(size),
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: new MyHomePage3(),
     );
   }
+}
 
-  Widget getAppBar() {
-    return PreferredSize(
-      preferredSize: Size.fromHeight(55),
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    Feather.lock,
-                    size: 18,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    username,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  IconButton(
-                    splashRadius: 15,
-                    icon: Icon(AntDesign.plus),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    splashRadius: 15,
-                    icon: Icon(FontAwesome.bars),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
+class MyHomePage3 extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage3> {
+  final textcontroller = TextEditingController();
+  final databaseRef = FirebaseDatabase.instance.reference();
+  final Future<FirebaseApp> _future = Firebase.initializeApp();
+  String aboutdata = 'wefw';
+
+//
+  @override
+  void initState() {
+    printFirebase().then((value) {
+      print('Async done');
+    });
+    super.initState();
+  }
+
+  Widget build(BuildContext context) {
+    return new Scaffold(
+        body: new Stack(
+      children: <Widget>[
+        ClipPath(
+          child: Container(color: Colors.black.withOpacity(0.8)),
+          clipper: getClipper(),
         ),
-      ),
-    );
-  }
-
-  Widget getBody(size) {
-    return ListView(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    width: (size.width - 20) * 0.3,
-                    child: Stack(
-                      children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(width: 1, color: bgGrey),
-                              image: DecorationImage(
-                                  image: NetworkImage(profile),
-                                  fit: BoxFit.cover)),
-                        ),
-                        Positioned(
-                          bottom: 0,
-                          right: 25,
-                          child: Container(
-                            height: 25,
-                            width: 25,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: primary,
-                                border: Border.all(width: 1, color: bgWhite)),
-                            child: Center(
-                              child: Icon(Icons.add, color: bgWhite),
-                            ),
+        Positioned(
+            width: 390.0,
+            top: MediaQuery.of(context).size.height / 4.3,
+            child: Column(
+              children: <Widget>[
+                Container(
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                'https://pixel.nymag.com/imgs/daily/vulture/2017/06/14/14-tom-cruise.w700.h700.jpg'),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(Radius.circular(75.0)),
+                        boxShadow: [
+                          BoxShadow(blurRadius: 7.0, color: Colors.black)
+                        ])),
+                SizedBox(height: 20.0),
+                Text(
+                  'Tom Cruise',
+                  style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Montserrat'),
+                ),
+                SizedBox(height: 15.0),
+                Text(
+                  'About Me',
+                  style: TextStyle(
+                      fontSize: 17.0,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Montserrat'),
+                ),
+                SizedBox(height: 15.0),
+                Text(
+                  ' aboutdata',
+                  style: TextStyle(
+                      fontSize: 17.0,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Montserrat'),
+                ),
+                SizedBox(height: 25.0),
+                Container(
+                    height: 30.0,
+                    width: 95.0,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(20.0),
+                      shadowColor: Colors.greenAccent,
+                      color: Colors.green,
+                      elevation: 7.0,
+                      child: GestureDetector(
+                        onTap: () {
+                          _navigateToaboutedit(context);
+                        },
+                        child: Center(
+                          child: Text(
+                            'Edit profile',
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Montserrat'),
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: (size.width - 20) * 0.7,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              "61",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Posts",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.5),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              "117",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Follwers",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.5),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              "173",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Following",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.5),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
-              Text(instagramName),
-              Text(instagramBio),
-              SizedBox(height: 15),
-              Container(
-                height: 35,
-                width: (size.width - 20),
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: bgGrey),
-                  borderRadius: BorderRadius.circular(5),
-                  color: bgLightGrey,
-                ),
-                child: Center(
-                  child: Text("Edit Profile"),
-                ),
-              ),
-              SizedBox(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Story Highlights",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Icon(FontAwesome.angle_down, size: 20)
-                ],
-              ),
-            ],
-          ),
-        ),
-        SizedBox(height: 15),
-        Container(
-          height: 0.5,
-          width: size.width,
-          decoration: BoxDecoration(color: bgGrey.withOpacity(0.8)),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 3),
-          child: Row(
-            children: [
-              Container(
-                width: (size.width * 0.5),
-                child: IconButton(
-                  splashRadius: 20,
-                  icon: Icon(
-                    FontAwesome.th,
-                    color: selectedIndex == 0
-                        ? textBlack
-                        : textBlack.withOpacity(0.5),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      selectedIndex = 0;
-                    });
-                  },
-                ),
-              ),
-              Container(
-                width: (size.width * 0.5),
-                child: IconButton(
-                  splashRadius: 20,
-                  icon: Icon(
-                    FontAwesome.id_badge,
-                    color: selectedIndex == 1
-                        ? textBlack
-                        : textBlack.withOpacity(0.5),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      selectedIndex = 1;
-                    });
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-        Column(
-          children: [
-            Row(
-              children: [
+                      ),
+                    )),
+                SizedBox(height: 25.0),
                 Container(
-                  height: 1,
-                  width: (size.width * 0.5),
-                  decoration: BoxDecoration(
-                      color: selectedIndex == 0 ? bgDark : Colors.transparent),
-                ),
-                Container(
-                  height: 1,
-                  width: (size.width * 0.5),
-                  decoration: BoxDecoration(
-                      color: selectedIndex == 1 ? bgDark : Colors.transparent),
-                ),
+                    height: 30.0,
+                    width: 95.0,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(20.0),
+                      shadowColor: Colors.redAccent,
+                      color: Colors.red,
+                      elevation: 7.0,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Center(
+                          child: Text(
+                            'Log out',
+                            style: TextStyle(
+                                color: Colors.white, fontFamily: 'Montserrat'),
+                          ),
+                        ),
+                      ),
+                    ))
               ],
-            ),
-            Container(
-              height: 0.5,
-              width: size.width,
-              decoration: BoxDecoration(color: bgGrey.withOpacity(0.8)),
-            ),
-          ],
-        ),
-        SizedBox(height: 3),
-        IndexedStack(
-          index: selectedIndex,
-          children: [
-            getImages(size),
-            getImageWithTags(size),
-          ],
-        ),
+            ))
       ],
-    );
+    ));
   }
 
-  Widget getImages(size) {
-    return Wrap(
-        direction: Axis.horizontal,
-        spacing: 3,
-        runSpacing: 3,
-        children: List.generate(images.length, (index) {
-          return Container(
-            height: 150,
-            width: (size.width - 6) / 3,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(images[index]), fit: BoxFit.cover)),
-          );
-        }));
+  Future printFirebase() {
+    databaseRef.once().then((DataSnapshot snapshot) {
+      print('Data : ${snapshot.value}');
+      String aboutdata = ('Data : ${snapshot.value}');
+      return aboutdata;
+    });
+  }
+}
+
+class getClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = new Path();
+
+    path.lineTo(0.0, size.height / 1.9);
+    path.lineTo(size.width + 125, 0.0);
+    path.close();
+    return path;
   }
 
-  Widget getImageWithTags(size) {
-    return Wrap(
-        direction: Axis.horizontal,
-        spacing: 3,
-        runSpacing: 3,
-        children: List.generate(imageWithTags.length, (index) {
-          return Container(
-            height: 150,
-            width: (size.width - 6) / 3,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(imageWithTags[index]),
-                    fit: BoxFit.cover)),
-          );
-        }));
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    // TODO: implement shouldReclip
+    return true;
   }
+}
+
+void _navigateToaboutedit(BuildContext context) {
+  print('about me');
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => aboutedit()));
 }
