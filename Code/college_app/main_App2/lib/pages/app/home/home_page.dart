@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage>
                     icon: const Icon(Icons.announcement),
                   ),
                   Tab(
-                    text: 'Achievements',
+                    text: 'Make Announcements',
                     icon: const Icon(Icons.collections_bookmark),
                   ),
                 ],
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage>
           controller: _tabController,
           children: <Widget>[
             AnnouncementsPage(),
-            AchievementsPage(),
+            TestMe(),
           ],
         ),
       ),

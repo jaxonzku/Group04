@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage>
                   padding: const EdgeInsets.symmetric(
                       horizontal: 80.0, vertical: 15.0),
                   child: Text(
-                    'Student Login',
+                    'Login',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -76,23 +76,6 @@ class _LoginPageState extends State<LoginPage>
                 ),
                 Container(
                   height: 50.0,
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    _sendTo(FacultyLoginPage());
-                  },
-                  shape: new StadiumBorder(),
-                  color: Colors.teal,
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 85.0, vertical: 15.0),
-                  child: Text(
-                    'Faculty Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                    ),
-                  ),
                 ),
               ],
             )
