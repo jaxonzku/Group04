@@ -11,11 +11,23 @@ class SingleAnnouncement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Duration duration = DateTime.now().difference(snapshot['timeStamp']);
+    Duration duration =
+        DateTime.now().difference(snapshot['timeStamp'].toDate());
     String timeAgo = '${methods.getDurationString(duration)} ago';
     bool _isNew = false;
-    if (duration.inDays <= 2) {
+    if (duration.inDays <= 1) {
       _isNew = true;
+
+      /*
+    String time = snapshot['timeStamp'].toDate().toString();
+    print(time);
+
+    String timeAgo = time; //"time $snapshot['timeStamp'].toDate().toString()";
+    bool _isNew = false;
+    // if (duration.inDays <= 2) {
+    //  bool _isNew = true;
+    // 
+    // */
     }
     return new Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,6 +79,7 @@ class SingleAnnouncement extends StatelessWidget {
   }
 
   _launchURL(String url, BuildContext context) async {
+    print('here2');
     if (await canLaunch(url)) {
       await launch(url);
     } else {

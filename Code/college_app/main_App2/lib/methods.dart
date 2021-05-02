@@ -103,6 +103,8 @@ String validateName(String value) {
 }
 
 String getDurationString(Duration duration) {
+  print(duration.inDays);
+
   String timeAgo = '';
   if (duration.inDays >= 1) {
     String d = (duration.inDays == 1) ? 'day' : 'days';

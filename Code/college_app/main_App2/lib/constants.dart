@@ -5,5 +5,6 @@ String madebecause = 'input04';
 String library = 'input05';
 String college_web = 'input06';
 String chatusers = 'input07';
+String messages = college_name + "";
 //String college_name8 = 'input01';
 //college image college.jpg

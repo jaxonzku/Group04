@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:college_App/pages/app/home/anoun.dart';
 import 'package:comment_box/comment/comment.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +14,15 @@ class _TestMeState extends State<TestMe> {
   final formKey = GlobalKey<FormState>();
   String key;
   String key2;
+  String key22;
+  FirebaseUser user;
+  String _fullName;
   final _formKey = GlobalKey<FormState>();
   final TextEditingController commentController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  TextEditingController _passwordController2 = TextEditingController();
+  TextEditingController _passwordController3 = TextEditingController();
+  TextEditingController _passwordController4 = TextEditingController();
   List filedata = [
     {
       'name': 'Adeleye Ayodeji',
@@ -23,6 +32,7 @@ class _TestMeState extends State<TestMe> {
   ];
   String result = "";
   TextEditingController myController;
+//  }
 
   void handleError(String s) {
     print("err:$s");
@@ -80,17 +90,60 @@ class _TestMeState extends State<TestMe> {
                           ),
                           Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: TextFormField(),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                labelText: 'Title',
+                                // icon: Icon(Icons.list),
+                              ),
+                              controller: _passwordController2,
+                              onSaved: (value) => key22 = value,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                labelText: 'Description',
+                                // icon: Icon(Icons.list),
+                              ),
+                              controller: _passwordController3,
+
+                              //
+
+                              onSaved: (value) => key22 = value,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                labelText: 'url',
+                                // icon: Icon(Icons.list),
+                              ),
+                              controller: _passwordController4,
+                              onSaved: (value) => key22 = value,
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: RaisedButton(
                               child: Text("Upload"),
                               onPressed: () {
-                                if (_formKey.currentState.validate()) {
-                                  _formKey.currentState.save();
-                                }
-                              },
+                                //print('here');
+                                // print(_passwordController2.text);
+                                userSetup(
+                                    _passwordController2.text.toString(),
+                                    _passwordController3.text.toString(),
+                                    _passwordController4.text.toString());
+                                Navigator.of(context).pop();
+
+                                // {"data": FieldValue.arrayUnion(map)});
+                              }
+
+                              // if (_formKey.currentState.validate()) {
+                              // _formKey.currentState.save();
+
+                              ,
                             ),
                           )
                         ],
@@ -101,6 +154,46 @@ class _TestMeState extends State<TestMe> {
               );
             });
         return true;
+      } else {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                content: Stack(
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Positioned(
+                      right: -40.0,
+                      top: -40.0,
+                      child: InkResponse(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: CircleAvatar(
+                          child: Icon(Icons.close),
+                          backgroundColor: Colors.red,
+                        ),
+                      ),
+                    ),
+                    Form(
+                      key: _formKey,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Wrong code.Pease try again"),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            });
       }
     }
   }
@@ -132,8 +225,9 @@ class _TestMeState extends State<TestMe> {
         theme: ThemeData.dark(),
         title: "My Text Field",
         home: Scaffold(
+            resizeToAvoidBottomInset: false,
             body: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -150,7 +244,7 @@ class _TestMeState extends State<TestMe> {
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 60),
+                      SizedBox(height: 10),
                       TextFormField(
                           controller: _passwordController,
                           onSaved: (value) => key2 = value,

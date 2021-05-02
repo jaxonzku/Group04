@@ -82,7 +82,7 @@ class _MainAppState extends State<MainApp> {
               title: Text('Library'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
+              icon: Icon(Icons.chat),
               title: Text('Chat'),
             ),
           ],

@@ -24,7 +24,7 @@ class _AnnouncementsPageState extends State<AnnouncementsPage> {
   Widget build(BuildContext context) {
     final appState = AppState.of(context);
     return Container(
-//      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       child: new RefreshIndicator(
         color: appColors.refreshColor,
         onRefresh: _onRefresh,
@@ -33,20 +33,29 @@ class _AnnouncementsPageState extends State<AnnouncementsPage> {
               .collection('announcements')
               .orderBy('timeStamp', descending: true)
               .snapshots(),
+
+          // .snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-            if (!snapshot.hasData)
+            if (!snapshot.hasData) {
+              print("nop");
               return const Center(child: CircularProgressIndicator());
-            return ListView(
-              padding: EdgeInsets.all(0.0),
-              children:
-                  snapshot.data.documents.map((DocumentSnapshot snapshot) {
-                if (snapshot['type'] == 'all' ||
-                    snapshot['type'] == appState.user.type) {
-                  return SingleAnnouncement(snapshot: snapshot);
-                }
-              }).toList(),
-            );
+            } else {
+              print(snapshot.data.documents);
+
+              return ListView(
+                padding: EdgeInsets.all(0.0),
+                children:
+                    snapshot.data.documents.map((DocumentSnapshot snapshot) {
+                  print("object");
+                  if (snapshot['type'] == 'all' ||
+                      snapshot['type'] == appState.user.type) {
+                    print('heree');
+                    return SingleAnnouncement(snapshot: snapshot);
+                  }
+                }).toList(),
+              );
+            }
           },
         ),
       ),

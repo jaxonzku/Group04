@@ -23,11 +23,15 @@ class _AllUsersScreenState extends State<AllUsersScreen> {
   final GoogleSignIn googleSignIn = GoogleSignIn();
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   StreamSubscription<QuerySnapshot> _subscription;
+  StreamSubscription<QuerySnapshot> _subscription2;
   List<DocumentSnapshot> usersList;
+  List<DocumentSnapshot> photo;
   String _name;
   String _email = '';
   final CollectionReference _collectionReference =
       Firestore.instance.collection(chatusers);
+  final CollectionReference _collectionReference2 =
+      Firestore.instance.collection('users-student');
   FirebaseUser firebaseUser;
   FirebaseAuth _auth = FirebaseAuth.instance;
   bool _isSignedIn = false;
@@ -50,13 +54,29 @@ class _AllUsersScreenState extends State<AllUsersScreen> {
 
   void initState() {
     super.initState();
-    _subscription = _collectionReference.snapshots().listen((datasnapshot) {
-      setState(() {
-        usersList = datasnapshot.documents;
-        print("Users List ${usersList.length}");
-        _getCurrentUser(usersList);
-      });
-    });
+
+    _subscription2 = _collectionReference2.snapshots().listen(
+      (datasnapshot) {
+        setState(() {
+          photo = datasnapshot.documents;
+
+          //  print("Users List ${usersList.length}");
+          // _getCurrentUser(photo);
+        });
+      },
+    );
+
+    _subscription = _collectionReference.snapshots().listen(
+      (datasnapshot) {
+        setState(() {
+          usersList = datasnapshot.documents;
+
+          print("Users List ${usersList.length}");
+          print("photo $photo.length");
+          _getCurrentUser(usersList);
+        });
+      },
+    );
   }
 
   @override
@@ -70,20 +90,6 @@ class _AllUsersScreenState extends State<AllUsersScreen> {
     return Scaffold(
         appBar: AppBar(
           title: Text("All Users"),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.close),
-              onPressed: () async {
-                await firebaseAuth.signOut();
-                await googleSignIn.disconnect();
-                await googleSignIn.signOut();
-                print("Signed Out");
-                Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(builder: (context) => MyApp22()),
-                    (Route<dynamic> route) => false);
-              },
-            )
-          ],
         ),
         body: usersList != null
             ? Container(
@@ -92,9 +98,9 @@ class _AllUsersScreenState extends State<AllUsersScreen> {
                   itemBuilder: ((context, index) {
                     return ListTile(
                       leading: CircleAvatar(
-                          // backgroundImage:
-                          //   NetworkImage(usersList[index].data['photoUrl']),
-                          ),
+                        backgroundImage:
+                            NetworkImage(photo[index].data['photoUrl']),
+                      ),
                       title: Text(usersList[index].data['name'],
                           style: TextStyle(
                             color: Colors.black,
@@ -110,7 +116,7 @@ class _AllUsersScreenState extends State<AllUsersScreen> {
                             new MaterialPageRoute(
                                 builder: (context) => ChatScreen(
                                     name: usersList[index].data['name'],
-                                    //photoUrl: usersList[index].data['photoUrl'],
+                                    photoUrl: photo[index].data['photoUrl'],
                                     receiverUid:
                                         usersList[index].data['uid'])));
                       }),
