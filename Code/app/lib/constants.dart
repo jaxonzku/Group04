@@ -1,0 +1,9 @@
+String collegename = 'input01';
+String appname = 'input02';
+String about = 'input03';
+String madebecause = 'input04';
+String library = 'input05';
+String collegeweb = 'input06';
+String chatusers = appname +'messages';
+String messages = appname +'messages';
+String userdata = appname +'users';

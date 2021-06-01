@@ -1,0 +1,17 @@
+STEP 1 : Removing OLD apk file from APP directory
+STEP 1 : success
+STEP 2 : Removing OLD apk file from WEB directory
+STEP 2 : success
+STEP 3 : Removing OLD college_image file from APP directory
+STEP 3 : success
+STEP 4:  Removing OLD college_logo file from APP directory
+STEP 5:  checking if apk exists
+STEP 5 : False
+STEP 6 : moving new images to app directory
+STEP 6  : success
+STEP 7 : obtaining data from details.txt and replacing
+STEP 8 : calling firebase function
+STEP 9 : logo generating in flutter
+STEP 10 : apk generating in flutter
+STEP 11 : reversing variables
+STEP 12 : moving apk
